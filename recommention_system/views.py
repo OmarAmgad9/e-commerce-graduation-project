@@ -110,16 +110,13 @@ def main(request):
     # print(X.head())
     X1 = X
     # Decomposing the Matrix
-
     SVD = TruncatedSVD(n_components=4)
     decomposed_matrix = SVD.fit_transform(X)
     # print(decomposed_matrix.shape)
     # Correlation Matrix
     correlation_matrix = np.corrcoef(decomposed_matrix)
-
-    recently_product = []
+    recently_product = ClickCount.objects.all().order_by('-count')[0:20]
     list_set = []
-    
     recommend_product = []
     number_recommend = []
     if request.user.is_authenticated:
@@ -134,7 +131,7 @@ def main(request):
     for count in recently_product:
         correlation_product_ID = correlation_matrix[count.count]
         Recommend = list(X.index[correlation_product_ID > 0.65])
-        for j in Recommend[0:10]:
+        for j in Recommend:
             number_recommend.append(j)
     for i in set(number_recommend):
         recommend_product.append(Product.objects.get(id=i))

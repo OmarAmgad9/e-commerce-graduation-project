@@ -30,7 +30,6 @@ def cart(request):
         total += i.product.price * i.quantity
         j +=1
     
-    
     if request.method == 'POST':
         locat = request.POST['location']
         phone = request.POST['phone']

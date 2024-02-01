@@ -67,12 +67,14 @@
       />
     </section>
     <hr />
-  <!-- <section id="view">
+  <section id="view">
       <h2># View</h2>
       <ul>
-            <li> </li>
-            <li></li>
+            <li><h2>Home Page:</h2><img src='./gitview/home.png' ></li>
+            <li><h2>Product Page :</h2><img src='./gitview/product.png' ></li>
+            <li><h2>login Page :</h2><img src='./gitview/login.png' ></li>
+            <li><h2>cart Page :</h2><img src='./gitview/cart.png' ></li>
       </ul>
-    </section> -->
+    </section>
   </body>
 </html>

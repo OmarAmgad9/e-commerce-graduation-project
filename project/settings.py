@@ -155,8 +155,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 # EMAIL_HOST_USER = 'shoping.onlin.1e.6@gmail.com'
 # EMAIL_HOST_PASSWORD = 'nxcy poki szvq oblf'
-EMAIL_HOST_USER = 'ahmedalngar221u@gmail.com'
-EMAIL_HOST_PASSWORD = 'sucxqxshvnqvbwls'
+
 
 EMAIL_USE_TLS = True
 # Default primary key field type
